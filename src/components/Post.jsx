@@ -2,7 +2,7 @@
 import classes from './Post.module.css'
 
 
-function Post(props){
+function Post({author,body}){
     
     // const chosenName = Math.random()>0.5 ? name[0]:name[1];
     // props.author
@@ -12,8 +12,8 @@ function Post(props){
             // return a+b;
             // }
         <li className={classes.post}>
-            <p className={classes.author}>{props.author} </p>
-            <p className={classes.text}>{props.body} </p>
+            <p className={classes.author}>{author} </p>
+            <p className={classes.text}>{body} </p>
         </li>
     );
 }
