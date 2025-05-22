@@ -1,7 +1,7 @@
 import{useState} from 'react';
 
 import Post from './Post.jsx';
-import NewPost from './NewPos.jsx';
+import NewPost from './NewPost.jsx';
 import classes from './Postlist.module.css';
 import Modal from './Modal.jsx';
 
@@ -37,6 +37,7 @@ function PostList({isPosting,onStopPosting}){
                    <NewPost 
                         onBodyChange={bodyChangeHandler} 
                         onAuthorChange={authorChangeHandler} 
+                        onCancel={onStopPosting}
                      />
                  </Modal>
             )}
