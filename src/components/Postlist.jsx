@@ -9,8 +9,9 @@ function PostList({isPosting,onStopPosting}){
     const [posts, setPosts] = useState([]);
 
     function addPostHandler(postData){
-        setPosts((existingPosts)=>[postData, ...existingPosts]);
+        setPosts((existingPosts) => [postData, ...existingPosts]);
     }
+
 
     return(
         <>
@@ -20,7 +21,7 @@ function PostList({isPosting,onStopPosting}){
                  </Modal>
             )}
             <ul className = {classes.posts}>    
-                <Post author ="Manuel" body="This is a test post" />
+                {posts.map((post) => <Post author={post.author} body={post.body} />)}
             </ul>
         </>
     );
